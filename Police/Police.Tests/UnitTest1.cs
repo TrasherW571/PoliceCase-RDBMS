@@ -1,7 +1,7 @@
 using System;
 using Xunit;
 
-namespace Police_RDBMS.Tests
+namespace Police.Tests
 {
     public class UnitTest1
     {

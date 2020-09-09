@@ -5,9 +5,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Police_RDBMS.Models;
+using Police.App.Models;
 
-namespace Police_RDBMS.Controllers
+namespace Police.App.Controllers
 {
     public class HomeController : Controller
     {

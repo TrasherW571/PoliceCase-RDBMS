@@ -1,9 +1,0 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
-
-  <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>Police_RDBMS</RootNamespace>
-    <UserSecretsId>699e8159-a21b-4f3b-b45c-b2f160bafcbe</UserSecretsId>
-  </PropertyGroup>
-
-</Project>

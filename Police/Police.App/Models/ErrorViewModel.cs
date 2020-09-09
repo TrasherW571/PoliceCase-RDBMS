@@ -1,6 +1,6 @@
 using System;
 
-namespace Police_RDBMS.Models
+namespace Police.App.Models
 {
     public class ErrorViewModel
     {
