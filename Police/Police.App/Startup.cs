@@ -5,14 +5,19 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
+using Police.Data.Entities;
 
 namespace Police.App
 {
     public class Startup
     {
+        private readonly ILoggerFactory loggerFactory = new LoggerFactory();
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -24,6 +29,11 @@ namespace Police.App
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+            services.AddDbContext<PoliceDBContext>(options =>
+                options
+                .UseLoggerFactory(loggerFactory)
+                .UseSqlServer(Configuration.GetConnectionString("SqlServer")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
